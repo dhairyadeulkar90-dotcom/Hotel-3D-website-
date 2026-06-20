@@ -1,0 +1,6 @@
+{
+  "name": "Royal Crest Resort",
+  "description": "An immersive luxury resort landing page with custom cinematic intro animations, an interactive real-time booking engine, exquisite copy and design guidelines implemented in live code.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-gold-50: #fbf7ec;
+  --color-gold-100: #f4ebd2;
+  --color-gold-200: #e9d5a5;
+  --color-gold-300: #dab973;
+  --color-gold-400: #cd9e4d;
+  --color-gold-500: #b8853b;
+  --color-gold-600: #97682d;
+  --color-gold-700: #784e24;
+  --color-gold-800: #5d3a1f;
+  --color-gold-900: #492e1b;
+}
+
+@layer base {
+  body {
+    background-color: #0b0c10;
+    color: #e5e7eb;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Smooth Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f1015;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2c3a;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cd9e4d;
+  }
+}
+
+/* Glassmorphism custom components */
+.glass-panel {
+  background: rgba(15, 16, 22, 0.45);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(205, 158, 77, 0.15);
+  border: 1px solid rgba(205, 158, 77, 0.35);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f4ebd2 0%, #dab973 50%, #b8853b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #e9d5a5 0%, #dab973 40%, #b8853b 80%, #784e24 100%);
+}
+
+.bg-dark-radial {
+  background: radial-gradient(circle at 50% 50%, #1a1c24 0%, #0c0d12 100%);
+}
+
+/* Custom Animation Classes */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.05);
+  }
+}
+
+.ambient-glow {
+  animation: pulseGlow 10s infinite ease-in-out;
+}
+
